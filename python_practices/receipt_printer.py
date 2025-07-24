@@ -7,7 +7,7 @@ def main ():
 
     while True:
         try:
-            item = input("Enter item name: ")
+            item = input("Enter item name: ").title()
             qnty = int(input("Enter its quantity: "))
             srp = float(input("Enter price: "))
             payment = float(input("Enter payment: " ))
@@ -26,7 +26,7 @@ def main ():
         if payment > final_bill:
             change = payment - final_bill
             
-        print("\n === Your receipt === ")
+        print("\n\t=== Your receipt === ")
         print(f"Item name:                  {item}")
         print(f"Quantity:                   {qnty}")
         print(f"Price:                  PHP {srp}")
