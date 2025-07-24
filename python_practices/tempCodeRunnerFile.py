@@ -1,5 +1,9 @@
-    print("Welcome to my guessing game!")
-    target = 87
-    guess = int(input("Please enter the lucky number"))
-    if guess == target:
-        print("You have won 1000 dollars!")
+choice = input("Do you want to play again? (y/n): ").lower()
+            if choice in ['y']:
+                break
+            elif choice in ['n']:
+                print("Thank you for playing")
+                return
+            else:
+                print("Please enter a valid input y or n!")
+                continue
