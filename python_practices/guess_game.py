@@ -3,12 +3,12 @@ import random
 def main():
 
     attempts = 0
-    max_attempts = 5
+    max_attempts = 10
 
     while True:
         print("Welcome to my guessing game!")
         print("Guess the lucky number from 1-100!\n")
-        print("Note: You only have 5 attempts, Goodluck!")
+        print(f"Note: You only have {max_attempts} attempts, Goodluck!")
         target = random.randint(1,100)
         while attempts < max_attempts:
             try:
@@ -17,12 +17,12 @@ def main():
 
 
                 if guess == target:
-                    print("You have won 1000 dollars!")
+                    print("You have won 1000 dollars!\n")
                     break
                 elif guess > target:
-                    print("Too High! Try another number")
+                    print("Too High! Try another number\n")
                 else:
-                    print("Too Low! Try another number")
+                    print("Too Low! Try another number\n")
             except ValueError:
                 print("Please enter a valid number!")
 
