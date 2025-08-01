@@ -1,7 +1,19 @@
 import random
 import time
 import sys
+def repeat():
+        while True:
 
+            choice = input("Do you want to play again? (y/n): ").lower()
+            if choice in ['y']:
+                main()
+                break
+            elif choice in ['n']:
+                print("Thank you for playing")
+                sys.exit()
+            else:
+                print("Please enter a valid input y or n!")
+                continue
 def main():
 
     attempts = 0
@@ -37,18 +49,9 @@ def main():
 
         else: 
             print(f"You have ran out of attempts! The lucky number was {target}")
-
-        while True:
-
-            choice = input("Do you want to play again? (y/n): ").lower()
-            if choice in ['y']:
-                break
-            elif choice in ['n']:
-                print("Thank you for playing")
-                return
-            else:
-                print("Please enter a valid input y or n!")
-                continue
+        
+        repeat()
+        
 
 if __name__ == "__main__":
     main()
