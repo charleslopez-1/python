@@ -1,4 +1,6 @@
 import random
+import time
+import sys
 
 def main():
 
@@ -6,8 +8,15 @@ def main():
     max_attempts = 10
 
     while True:
+
         print("Welcome to my guessing game!")
-        print("Guess the lucky number from 1-100!\n")
+        for i in range(2):
+            for i in range(4):
+                print(f"\rLoading{'.' * i} ",end = '', flush = True )
+                time.sleep(0.4)
+        print("\r" + ' ' * 20 + "\r" , end = '')
+
+        print("\nGuess the lucky number from 1-100!\n")
         print(f"Note: You only have {max_attempts} attempts, Goodluck!")
         target = random.randint(1,100)
         while attempts < max_attempts:
